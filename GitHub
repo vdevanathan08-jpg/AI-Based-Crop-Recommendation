@@ -1,0 +1,37 @@
+GitHub Usage
+
+GitHub is used to store, organize, manage, and share this 8-Puzzle A* Search project.
+
+The project files are maintained in a GitHub repository so that changes can be tracked and previous versions can be maintained.
+
+GitHub Workflow
+
+Create Repository
+       ↓
+Add Project Files
+       ↓
+Commit Changes
+       ↓
+Push to GitHub
+       ↓
+Track Versions
+       ↓
+Share and Collaborate
+
+GitHub helps the team maintain project documentation, update files, track progress, and collaborate during the assessment.
+
+Project Structure
+
+8-Puzzle-A-Star
+│
+├── README.md
+├── Introduction.md
+├── Abstraction.md
+├── Objectives.md
+├── A-Star-Solution.md
+├── Heuristics.md
+├── Applications.md
+├── Real-Time-Examples.md
+├── GitHub.md
+├── Conclusion.md
+└── References.md
