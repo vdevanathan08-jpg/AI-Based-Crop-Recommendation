@@ -1,0 +1,7 @@
+Introduction
+The 8-Puzzle is a well-known problem in Artificial Intelligence used to understand search and problem-solving techniques. It consists of eight numbered tiles and one blank space arranged in a 3 × 3 grid.
+The objective is to move the tiles into the correct order by sliding them into the blank space. The A* Search Algorithm is used to find an efficient path from the initial state to the goal state.
+A* uses both the cost of moves already made and an estimated cost to reach the goal. The evaluation function is:
+f(n) = g(n) + h(n)
+Here, g(n) represents the cost from the initial state to the current state, while h(n) represents the estimated cost from the current state to the goal.
+This project explains the working of A*, different heuristics, step-by-step puzzle solving, applications, and real-time examples.
