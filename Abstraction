@@ -1,0 +1,34 @@
+Abstraction
+
+The 8-Puzzle can be represented as a state-space search problem.
+
+Initial State
+
++---+---+---+
+| 1 | 2 | 3 |
++---+---+---+
+| 4 |   | 6 |
++---+---+---+
+| 7 | 5 | 8 |
++---+---+---+
+
+Goal State
+
++---+---+---+
+| 1 | 2 | 3 |
++---+---+---+
+| 4 | 5 | 6 |
++---+---+---+
+| 7 | 8 |   |
++---+---+---+
+
+The main components are:
+
+- State: Arrangement of tiles on the board.
+- Initial State: Starting arrangement.
+- Goal State: Required final arrangement.
+- Operators: Moving the blank space up, down, left, or right.
+- Path Cost: Cost of each movement.
+- Heuristic: Estimated cost of reaching the goal.
+
+The search process generates possible states and selects the most promising state using the A* evaluation function.
