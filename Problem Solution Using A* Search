@@ -1,0 +1,81 @@
+Problem Solution Using A* Search
+
+Initial State
+
++---+---+---+
+| 1 | 2 | 3 |
++---+---+---+
+| 4 |   | 6 |
++---+---+---+
+| 7 | 5 | 8 |
++---+---+---+
+
+## Goal State
+
++---+---+---+
+| 1 | 2 | 3 |
++---+---+---+
+| 4 | 5 | 6 |
++---+---+---+
+| 7 | 8 |   |
++---+---+---+
+
+Step 1: Calculate Initial Cost
+
+No moves have been made.
+
+g(n) = 0
+
+Using the Misplaced Tiles heuristic, tiles 5 and 8
+are in the wrong positions.
+
+h(n) = 2
+
+Therefore:
+
+f(n) = g(n) + h(n)
+     = 0 + 2
+     = 2
+
+Step 2: Move Tile 5
+
+Move tile 5 upward into the blank space.
+
++---+---+---+
+| 1 | 2 | 3 |
++---+---+---+
+| 4 | 5 | 6 |
++---+---+---+
+| 7 |   | 8 |
++---+---+---+
+
+Now:
+
+g(n) = 1
+h(n) = 1
+f(n) = 1 + 1 = 2
+
+Step 3: Move Tile 8
+
+Move tile 8 to the left.
+
++---+---+---+
+| 1 | 2 | 3 |
++---+---+---+
+| 4 | 5 | 6 |
++---+---+---+
+| 7 | 8 |   |
++---+---+---+
+
+Now the goal state is reached.
+
+g(n) = 2
+h(n) = 0
+f(n) = 2
+
+Solution
+
+The puzzle is solved in 2 moves.
+
+Move 1: Tile 5 moves Up
+Move 2: Tile 8 moves Left
