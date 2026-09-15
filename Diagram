@@ -1,0 +1,26 @@
+                 8-PUZZLE
+                     │
+                     ↓
+              INITIAL STATE
+                     │
+                     ↓
+              GENERATE STATES
+                     │
+                     ↓
+              CALCULATE f(n)
+                     │
+             f(n)=g(n)+h(n)
+                     │
+          ┌──────────┴──────────┐
+          ↓                     ↓
+   MISPLACED TILES       MANHATTAN DISTANCE
+          │                     │
+          └──────────┬──────────┘
+                     ↓
+               BEST STATE
+                     │
+                     ↓
+                GOAL STATE
+                     │
+                     ↓
+                 SOLUTION
