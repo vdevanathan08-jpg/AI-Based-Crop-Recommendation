@@ -1,0 +1,13 @@
+Objectives
+
+The main objectives of this project are:
+
+1. To understand the 8-Puzzle problem in Artificial Intelligence.
+2. To understand the A* Search Algorithm.
+3. To represent the puzzle as a state-space problem.
+4. To calculate g(n), h(n), and f(n).
+5. To understand Misplaced Tiles and Manhattan Distance heuristics.
+6. To find an efficient path from the initial state to the goal state.
+7. To compare different heuristic approaches.
+8. To understand real-world applications of A* Search.
+9. To use GitHub for storing, organizing, and sharing the project.
