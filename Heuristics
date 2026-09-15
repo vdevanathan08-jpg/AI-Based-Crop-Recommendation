@@ -1,0 +1,41 @@
+Heuristics
+
+A heuristic is an estimated measure of the cost required to reach the goal state.
+
+1. Misplaced Tiles
+
+The Misplaced Tiles heuristic counts the number of tiles that are not in their correct positions.
+Example:
+
+Initial:
+
+1 2 3
+4 _ 6
+7 5 8
+
+Goal:
+
+1 2 3
+4 5 6
+7 8 _
+
+Tiles 5 and 8 are misplaced.
+Therefore:
+
+h(n) = 2
+
+2. Manhattan Distance
+Manhattan Distance calculates how far each tile is from its correct position.
+
+Formula:
+
+Distance = |Current Row - Goal Row|
+         + |Current Column - Goal Column|
+
+The distances of all tiles are added together to obtain h(n).
+
+Comparison
+Misplaced Tiles is simple and easy to calculate.
+Manhattan Distance provides more information about the actual position of the tiles. Therefore, it can guide A* more effectively and may reduce unnecessary node expansion.
+
+Both heuristics are admissible because they do not overestimate the actual cost of reaching the goal.
