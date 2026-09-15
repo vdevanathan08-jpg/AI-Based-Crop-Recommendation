@@ -1,0 +1,7 @@
+Conclusion
+
+The 8-Puzzle is a useful example for understanding Artificial Intelligence search techniques.
+A* Search uses g(n) and h(n) to select promising states and find an efficient solution.
+Misplaced Tiles and Manhattan Distance help A* estimate the remaining cost. The project also demonstrates how GitHub can be
+used to organize, track, maintain, and share the assessment work.
+Overall, this project provides a simple understanding of heuristic search and its practical applications in AI.
