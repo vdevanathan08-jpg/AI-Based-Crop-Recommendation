@@ -1,0 +1,13 @@
+# Real-Time Examples
+
+GPS Navigation
+Navigation systems need to find suitable paths between locations. A* can consider the distance already travelled and the estimated distance to the destination.
+
+Robot Navigation
+A warehouse robot may need to travel from its starting position to a particular shelf while avoiding obstacles. A* can identify an efficient path.
+
+Video Games
+In games, characters need to move from one location to another while avoiding walls and obstacles. A* is commonly used for pathfinding.
+
+Autonomous Systems
+Autonomous machines need to make decisions about movement and routes. Heuristic search can help them find suitable paths efficiently.
