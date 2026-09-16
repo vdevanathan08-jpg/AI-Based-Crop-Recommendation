@@ -1,0 +1,66 @@
+import heapq
+
+goal = (1, 2, 3, 4, 5, 6, 7, 8, 0)
+
+def misplaced(state):
+    return sum(state[i] != goal[i] and state[i] != 0
+               for i in range(9))
+
+def manhattan(state):
+    distance = 0
+    for i, value in enumerate(state):
+        if value != 0:
+            j = goal.index(value)
+            distance += abs(i // 3 - j // 3) + abs(i % 3 - j % 3)
+    return distance
+
+def solve(start, heuristic):
+    pq = [(heuristic(start), 0, start, [])]
+    visited = set()
+
+    while pq:
+        f, g, state, path = heapq.heappop(pq)
+
+        if state == goal:
+            return path + [state]
+
+        if state in visited:
+            continue
+        visited.add(state)
+
+        zero = state.index(0)
+        row, col = zero // 3, zero % 3
+
+        for dr, dc in [(1,0), (-1,0), (0,1), (0,-1)]:
+            r, c = row + dr, col + dc
+
+            if 0 <= r < 3 and 0 <= c < 3:
+                new_zero = r * 3 + c
+                new_state = list(state)
+                new_state[zero], new_state[new_zero] = \
+                    new_state[new_zero], new_state[zero]
+                new_state = tuple(new_state)
+
+                if new_state not in visited:
+                    new_g = g + 1
+                    new_f = new_g + heuristic(new_state)
+                    heapq.heappush(
+                        pq, (new_f, new_g, new_state, path + [state])
+                    )
+
+start = (1, 2, 3, 4, 0, 6, 7, 5, 8)
+
+for name, heuristic in [
+    ("Misplaced Tiles", misplaced),
+    ("Manhattan Distance", manhattan)
+]:
+    solution = solve(start, heuristic)
+
+    print("\n", name)
+    print("Moves:", len(solution) - 1)
+
+    for state in solution:
+        print(state[0:3])
+        print(state[3:6])
+        print(state[6:9])
+        print()
